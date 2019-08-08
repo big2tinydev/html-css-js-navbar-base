@@ -117,79 +117,62 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"app.js":[function(require,module,exports) {
+// Buttons
+var bottomDrawerButton = document.querySelector('.btm-drawer-btn');
+var topDrawerButton = document.querySelector('.top-drawer-btn');
+var leftDrawerButton = document.querySelector('.left-drawer-btn');
+var rightDrawerButton = document.querySelector('.right-drawer-btn'); // Containers
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
+var bottomDrawerContainer = document.querySelector('.bottom-drawer');
+var topDrawerContainer = document.querySelector('.top-drawer');
+var leftDrawerContainer = document.querySelector('.left-drawer');
+var rightDrawerContainer = document.querySelector('.right-drawer'); // Toggle BOTTOM Drawer between OPEN & CLOSED
+
+bottomDrawerButton.addEventListener('click', function () {
+  if (bottomDrawerContainer.style.display === 'none') {
+    topDrawerContainer.style.display = 'none';
+    leftDrawerContainer.style.display = 'none';
+    rightDrawerContainer.style.display = 'none';
+    bottomDrawerContainer.style.display = 'block';
+  } else {
+    bottomDrawerContainer.style.display = 'none';
   }
+}); // Toggle TOP Drawer between OPEN & CLOSED
 
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
+topDrawerButton.addEventListener('click', function () {
+  if (topDrawerContainer.style.display === 'none') {
+    topDrawerContainer.style.display = 'flex';
+    leftDrawerContainer.style.display = 'none';
+    rightDrawerContainer.style.display = 'none';
+    bottomDrawerContainer.style.display = 'none';
+  } else {
+    topDrawerContainer.style.display = 'none';
   }
+}); // Toggle LEFT Drawer between OPEN & CLOSED
 
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
+leftDrawerButton.addEventListener('click', function () {
+  if (leftDrawerContainer.style.display === 'none') {
+    topDrawerContainer.style.display = 'none';
+    leftDrawerContainer.style.display = 'flex';
+    rightDrawerContainer.style.display = 'none';
+    bottomDrawerContainer.style.display = 'none';
+  } else {
+    leftDrawerContainer.style.display = 'none';
   }
+}); // Toggle RIGHT Drawer between OPEN & CLOSED
 
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+rightDrawerButton.addEventListener('click', function () {
+  if (rightDrawerContainer.style.display === 'none') {
+    topDrawerContainer.style.display = 'none';
+    leftDrawerContainer.style.display = 'none';
+    rightDrawerContainer.style.display = 'flex';
+    bottomDrawerContainer.style.display = 'none';
+  } else {
+    rightDrawerContainer.style.display = 'none';
+  }
+});
+},{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -392,5 +375,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/main.39afc03c.js.map
+},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","app.js"], null)
+//# sourceMappingURL=/app.c328ef1a.js.map

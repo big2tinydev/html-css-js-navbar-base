@@ -1,7 +1,7 @@
 $myFont: Poppins;
 $bodyWidth: 100vw;
 $bodyHeight: 100vh;
-$navbarHeight: 8vh;
+$navbarHeight: 13vh;
 $navbarColor: blue;
 $navbarTextColor: white;
 $drawerTextColor: black;
@@ -28,6 +28,10 @@ body {
   background: #e4e4e4;
 }
 
+.center {
+  text-align: center;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -36,15 +40,31 @@ body {
   height: $navbarHeight;
   background: $navbarColor;
   .top-drawer {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     color: $drawerTextColor;
     position: fixed;
     top: $navbarHeight;
     left: 0;
     width: $bodyWidth;
-    height: $topDrawerHeight;
+    height: auto;
     background: rgba(191, 191, 191, 0.5);
+    .app-icon {
+      cursor: pointer;
+      margin: 0.75vh;
+    }
+  }
+
+  .drawer-header {
+    margin-left: 2.5vw;
+  }
+
+  .active {
+    display: none;
   }
   .left-drawer {
+    display: none;
     color: $drawerTextColor;
     position: fixed;
     left: 0;
@@ -54,6 +74,7 @@ body {
     background: rgba(191, 191, 191, 0.5);
   }
   .right-drawer {
+    display: none;
     color: $drawerTextColor;
     position: fixed;
     right: 0;
@@ -77,6 +98,7 @@ body {
   height: $footerHeight;
   background-color: $navbarColor;
   .bottom-drawer {
+    display: none;
     color: $drawerTextColor;
     z-index: 2;
     position: fixed;
@@ -84,12 +106,33 @@ body {
     bottom: $footerHeight;
     width: $bodyWidth;
     text-align: center;
-    height: $bottomDrawerHeight;
+    height: auto;
     background: rgba(191, 191, 191, 0.5);
   }
 }
 
+.brand {
+  width: 80vw;
+  display: flex;
+  margin-top: 1vh;
+  margin-left: 7vw;
+  .brand-logo {
+    cursor: pointer;
+    width: $iconSize;
+    height: $iconSize;
+  }
+  .brand-title {
+    cursor: pointer;
+    display: flex;
+    justify-items: center;
+    font-size: 26px;
+    margin-left: 10px;
+  }
+}
+
 .hamburger {
+  cursor: pointer;
+  color: $navbarTextColor;
   float: right;
   margin-top: 2vh;
   margin-right: 2vh;
@@ -98,26 +141,21 @@ body {
   height: $iconSize;
 }
 
-.left-drawer-icon {
-  position: absolute;
-  width: 30px;
-  height: 30px;
+.icon {
+  cursor: pointer;
+  color: $navbarTextColor;
+  margin-top: 2vh;
+  margin-right: 2vh;
+  width: $iconSize;
+  height: $iconSize;
 }
 
-.right-drawer-icon {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-}
-
-.top-drawer-icon {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-}
-
-.bottom-drawer-icon {
-  position: absolute;
-  width: 30px;
-  height: 30px;
+.drawer-icon {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.75vh;
+  margin-bottom: 1.5vh;
 }
