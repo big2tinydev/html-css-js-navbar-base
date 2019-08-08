@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #e4e4e4;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 8vh;
+  background: blue;
+}
+.navbar .top-drawer {
+  color: black;
+  position: fixed;
+  top: 8vh;
+  left: 0;
+  width: 100vw;
+  height: 10vh;
+  background: rgba(191, 191, 191, 0.5);
+}
+.navbar .left-drawer {
+  color: black;
+  position: fixed;
+  left: 0;
+  top: 8vh;
+  width: 300px;
+  height: 104.5vh;
+  background: rgba(191, 191, 191, 0.5);
+}
+.navbar .right-drawer {
+  color: black;
+  position: fixed;
+  right: 0;
+  top: 8vh;
+  width: 300px;
+  height: 104.5vh;
+  background: rgba(191, 191, 191, 0.5);
+}
+
+.footer {
+  color: white;
+  font-weight: 200;
+  font-size: 18px;
+  z-index: 10;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  text-align: center;
+  height: 3.5vh;
+  background-color: blue;
+}
+.footer .bottom-drawer {
+  color: black;
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  bottom: 3.5vh;
+  width: 100vw;
+  text-align: center;
+  height: 10vh;
+  background: rgba(191, 191, 191, 0.5);
+}
+
+.hamburger {
+  float: right;
+  margin-top: 2vh;
+  margin-right: 2vh;
+  position: relative;
+  width: 5vh;
+  height: 5vh;
+}
+
+.left-drawer-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+.right-drawer-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+.top-drawer-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+.bottom-drawer-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+/*# sourceMappingURL=/main.39afc03c.css.map */

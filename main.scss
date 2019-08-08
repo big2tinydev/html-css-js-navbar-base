@@ -1,0 +1,123 @@
+$myFont: Poppins;
+$bodyWidth: 100vw;
+$bodyHeight: 100vh;
+$navbarHeight: 8vh;
+$navbarColor: blue;
+$navbarTextColor: white;
+$drawerTextColor: black;
+$footerHeight: 3.5vh;
+$bottomDrawerHeight: 10vh;
+$topDrawerHeight: 10vh;
+$sideDrawerWidth: 300px;
+$iconSize: 5vh;
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $myFont;
+}
+
+body {
+  position: relative;
+  width: $bodyWidth;
+  height: $bodyHeight;
+  background: #e4e4e4;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $bodyWidth;
+  height: $navbarHeight;
+  background: $navbarColor;
+  .top-drawer {
+    color: $drawerTextColor;
+    position: fixed;
+    top: $navbarHeight;
+    left: 0;
+    width: $bodyWidth;
+    height: $topDrawerHeight;
+    background: rgba(191, 191, 191, 0.5);
+  }
+  .left-drawer {
+    color: $drawerTextColor;
+    position: fixed;
+    left: 0;
+    top: $navbarHeight;
+    width: $sideDrawerWidth;
+    height: ($bodyHeight - ($footerHeight - $navbarHeight));
+    background: rgba(191, 191, 191, 0.5);
+  }
+  .right-drawer {
+    color: $drawerTextColor;
+    position: fixed;
+    right: 0;
+    top: $navbarHeight;
+    width: $sideDrawerWidth;
+    height: ($bodyHeight - ($footerHeight - $navbarHeight));
+    background: rgba(191, 191, 191, 0.5);
+  }
+}
+
+.footer {
+  color: $navbarTextColor;
+  font-weight: 200;
+  font-size: 18px;
+  z-index: 10;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: $bodyWidth;
+  text-align: center;
+  height: $footerHeight;
+  background-color: $navbarColor;
+  .bottom-drawer {
+    color: $drawerTextColor;
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    bottom: $footerHeight;
+    width: $bodyWidth;
+    text-align: center;
+    height: $bottomDrawerHeight;
+    background: rgba(191, 191, 191, 0.5);
+  }
+}
+
+.hamburger {
+  float: right;
+  margin-top: 2vh;
+  margin-right: 2vh;
+  position: relative;
+  width: $iconSize;
+  height: $iconSize;
+}
+
+.left-drawer-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+.right-drawer-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+.top-drawer-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+.bottom-drawer-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
