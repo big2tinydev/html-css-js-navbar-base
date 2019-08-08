@@ -19,15 +19,30 @@ body {
   text-align: center;
 }
 
+.links {
+  display: flex;
+  margin-left: 20vw;
+  justify-content: space-evenly;
+  list-style: none;
+  font-size: 26px;
+}
+
+.link {
+  display: flex;
+  margin-right: 30px;
+  text-decoration: none;
+  color: white;
+}
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 13vh;
+  height: auto;
   background: blue;
 }
-.navbar .top-drawer {
+.navbar .top.drawer {
   display: none;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -39,35 +54,57 @@ body {
   height: auto;
   background: rgba(191, 191, 191, 0.5);
 }
-.navbar .top-drawer .app-icon {
+.navbar .top.drawer .app-icon {
   cursor: pointer;
   margin: 0.75vh;
 }
+.navbar .header {
+  height: 40px;
+}
+.navbar .settings {
+  height: 5vh;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 .navbar .drawer-header {
-  margin-left: 2.5vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
 }
 .navbar .active {
   display: none;
 }
-.navbar .left-drawer {
+.navbar .left.drawer {
   display: none;
   color: black;
   position: fixed;
   left: 0;
   top: 13vh;
-  width: 300px;
+  width: 250px;
   height: 109.5vh;
   background: rgba(191, 191, 191, 0.5);
 }
-.navbar .right-drawer {
+.navbar .right.drawer {
   display: none;
   color: black;
   position: fixed;
   right: 0;
   top: 13vh;
-  width: 300px;
+  width: 250px;
   height: 109.5vh;
   background: rgba(191, 191, 191, 0.5);
+}
+
+.drawer-link {
+  display: flex;
+  margin-left: 20px;
+}
+.drawer-link a {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+  list-style: none;
 }
 
 .footer {
@@ -83,7 +120,7 @@ body {
   height: 3.5vh;
   background-color: blue;
 }
-.footer .bottom-drawer {
+.footer .bottom.drawer {
   display: none;
   color: black;
   z-index: 2;
@@ -108,6 +145,7 @@ body {
   height: 5vh;
 }
 .brand .brand-title {
+  color: white;
   cursor: pointer;
   display: flex;
   justify-items: center;
@@ -116,6 +154,7 @@ body {
 }
 
 .hamburger {
+  display: none;
   cursor: pointer;
   color: white;
   float: right;
@@ -143,6 +182,16 @@ body {
   margin-right: auto;
   margin-top: 0.75vh;
   margin-bottom: 1.5vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=/main.39afc03c.css.map */

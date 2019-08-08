@@ -4,10 +4,10 @@ const topDrawerButton = document.querySelector('.top-drawer-btn')
 const leftDrawerButton = document.querySelector('.left-drawer-btn')
 const rightDrawerButton = document.querySelector('.right-drawer-btn')
 // Containers
-const bottomDrawerContainer = document.querySelector('.bottom-drawer')
-const topDrawerContainer = document.querySelector('.top-drawer')
-const leftDrawerContainer = document.querySelector('.left-drawer')
-const rightDrawerContainer = document.querySelector('.right-drawer')
+const bottomDrawerContainer = document.querySelector('.bottom.drawer')
+const topDrawerContainer = document.querySelector('.top.drawer')
+const leftDrawerContainer = document.querySelector('.left.drawer')
+const rightDrawerContainer = document.querySelector('.right.drawer')
 
 // Toggle BOTTOM Drawer between OPEN & CLOSED
 bottomDrawerButton.addEventListener('click', () => {

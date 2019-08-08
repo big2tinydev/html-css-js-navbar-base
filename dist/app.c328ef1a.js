@@ -124,10 +124,10 @@ var topDrawerButton = document.querySelector('.top-drawer-btn');
 var leftDrawerButton = document.querySelector('.left-drawer-btn');
 var rightDrawerButton = document.querySelector('.right-drawer-btn'); // Containers
 
-var bottomDrawerContainer = document.querySelector('.bottom-drawer');
-var topDrawerContainer = document.querySelector('.top-drawer');
-var leftDrawerContainer = document.querySelector('.left-drawer');
-var rightDrawerContainer = document.querySelector('.right-drawer'); // Toggle BOTTOM Drawer between OPEN & CLOSED
+var bottomDrawerContainer = document.querySelector('.bottom.drawer');
+var topDrawerContainer = document.querySelector('.top.drawer');
+var leftDrawerContainer = document.querySelector('.left.drawer');
+var rightDrawerContainer = document.querySelector('.right.drawer'); // Toggle BOTTOM Drawer between OPEN & CLOSED
 
 bottomDrawerButton.addEventListener('click', function () {
   if (bottomDrawerContainer.style.display === 'none') {
@@ -200,7 +200,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51549" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49884" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

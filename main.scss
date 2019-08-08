@@ -8,7 +8,7 @@ $drawerTextColor: black;
 $footerHeight: 3.5vh;
 $bottomDrawerHeight: 10vh;
 $topDrawerHeight: 10vh;
-$sideDrawerWidth: 300px;
+$sideDrawerWidth: 250px;
 $iconSize: 5vh;
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
 
@@ -32,14 +32,29 @@ body {
   text-align: center;
 }
 
+.links {
+  display: flex;
+  margin-left: 20vw;
+  justify-content: space-evenly;
+  list-style: none;
+  font-size: 26px;
+}
+
+.link {
+  display: flex;
+  margin-right: 30px;
+  text-decoration: none;
+  color: $navbarTextColor;
+}
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: $bodyWidth;
-  height: $navbarHeight;
+  height: auto;
   background: $navbarColor;
-  .top-drawer {
+  .top.drawer {
     display: none;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -56,14 +71,29 @@ body {
     }
   }
 
+  .header {
+    height: 40px;
+  }
+
+  .settings {
+    height: $iconSize;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .btm-drawer-title {
+  }
   .drawer-header {
-    margin-left: 2.5vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
   }
 
   .active {
     display: none;
   }
-  .left-drawer {
+  .left.drawer {
     display: none;
     color: $drawerTextColor;
     position: fixed;
@@ -73,7 +103,7 @@ body {
     height: ($bodyHeight - ($footerHeight - $navbarHeight));
     background: rgba(191, 191, 191, 0.5);
   }
-  .right-drawer {
+  .right.drawer {
     display: none;
     color: $drawerTextColor;
     position: fixed;
@@ -82,6 +112,17 @@ body {
     width: $sideDrawerWidth;
     height: ($bodyHeight - ($footerHeight - $navbarHeight));
     background: rgba(191, 191, 191, 0.5);
+  }
+}
+
+.drawer-link {
+  display: flex;
+  margin-left: 20px;
+  a {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    list-style: none;
   }
 }
 
@@ -97,7 +138,7 @@ body {
   text-align: center;
   height: $footerHeight;
   background-color: $navbarColor;
-  .bottom-drawer {
+  .bottom.drawer {
     display: none;
     color: $drawerTextColor;
     z-index: 2;
@@ -122,6 +163,7 @@ body {
     height: $iconSize;
   }
   .brand-title {
+    color: $navbarTextColor;
     cursor: pointer;
     display: flex;
     justify-items: center;
@@ -131,6 +173,7 @@ body {
 }
 
 .hamburger {
+  display: none;
   cursor: pointer;
   color: $navbarTextColor;
   float: right;
@@ -158,4 +201,13 @@ body {
   margin-right: auto;
   margin-top: 0.75vh;
   margin-bottom: 1.5vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
 }
